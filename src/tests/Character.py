@@ -1,5 +1,5 @@
 #Create a character as part of the assignment
-
+from Alignment import Morals
 class Character:
     def __init__(self):
         self.name = 'Cletus'
@@ -7,6 +7,9 @@ class Character:
     #takes in a string
     def set_name(self, n):
         self.name = n
+    
+    def have_alignment(self, alignment):
+        self.alignment =alignment
 '''
 class Character:
     def __init__(self, name, health, strength):

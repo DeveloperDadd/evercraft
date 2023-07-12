@@ -1,6 +1,7 @@
 # As a user I want to have an alignment so that it is an excuse for my mental health issues.
 from Character import Character
 # three alignments: Good, Neutral, and Evil
+# choices = ["Good", "Neutral", "Evil"]
 class Morals:
     def __init__(self):
         self.alignment = 'Good'
