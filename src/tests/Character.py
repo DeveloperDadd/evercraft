@@ -13,6 +13,8 @@ class Character:
     
     def have_alignment(self, alignment):
         self.alignment =alignment
+    def default_armor(self, armor):
+        self.armor = 0
 '''
 class Character:
     def __init__(self, name, health, strength):
