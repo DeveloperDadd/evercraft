@@ -3,5 +3,6 @@
 # Has 5 hitpoints by default
 
 class Armor_And_Hitpoints:
-    def __init__(self, armor = 10.0, hitpoints = 5.0):
-        pass
+    def __init__(self, armor, hitpoints):
+        self.armor = 10.0
+        self.hitpoints = 5.0
