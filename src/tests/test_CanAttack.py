@@ -13,6 +13,11 @@ def test_can_attack():
     result = attack.check_attack(10, defender)
     assert result is False
 
+
+
+
+
+
     # Simulate attacking with a roll of 15
     result = attack.check_attack(15, defender)
     assert result is True

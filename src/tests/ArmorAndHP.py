@@ -6,3 +6,5 @@ class Armor_And_Hitpoints:
     def __init__(self, armor, hitpoints):
         self.armor = 10.0
         self.hitpoints = 5.0
+        when self.hitpoints = 0
+            death = True
