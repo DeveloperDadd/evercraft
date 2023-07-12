@@ -1,5 +1,8 @@
 #Create a character as part of the assignment
 from Alignment import Morals
+from ArmorAndHP import Armor_And_Hitpoints
+from CanAttack import CanAttack
+
 class Character:
     def __init__(self):
         self.name = 'Cletus'
@@ -10,6 +13,13 @@ class Character:
     
     def have_alignment(self, alignment):
         self.alignment =alignment
+   
+    def default_armor(self, armor):
+        self.armor = 0
+
+
+
+
 '''
 class Character:
     def __init__(self, name, health, strength):
