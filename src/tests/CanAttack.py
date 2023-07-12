@@ -1,8 +1,14 @@
 import random 
+
 class CanAttack:
     def __init__(self):
-        self.roll = random.randint(1, 20)
+        pass
 
-    def check_attack(self, armor_class, bonus_armor):
-        effective_armor_class = armor_class + bonus_armor
-        return self.roll >= effective_armor_class
+    def check_attack(self, roll, defender):
+        self.roll = roll
+        canAttack = False
+        if self.roll > defender.armor:
+            canAttack = True
+        else:
+            canAttack = False
+        return canAttack
