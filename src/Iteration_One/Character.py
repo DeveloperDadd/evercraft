@@ -5,6 +5,7 @@ class Character:
         self.name = 'Cletus'
         self.armor = armor
         self.hitpoints = hitpoints
+        self.alignment = 'Good'
 
     #takes in a string 
     def set_name(self, n):

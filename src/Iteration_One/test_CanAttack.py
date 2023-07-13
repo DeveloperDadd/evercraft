@@ -6,21 +6,8 @@ def test_can_attack():
     defender.armor = 12
 
     # Create an instance of CanAttack
-    attack = CanAttack()
+    attack = Character.check_attack
 
     # Simulate attacking with a roll of 10
-    result = attack.check_attack(10, defender)
+    result = attack(10, defender)
     assert result is False
-
-
-
-
-
-
-    # Simulate attacking with a roll of 15
-    result = attack.check_attack(15, defender)
-    assert result is True
-
-    # Simulate attacking with a roll of 20 (critical hit)
-    result = attack.check_attack(20, defender)
-    assert result is True

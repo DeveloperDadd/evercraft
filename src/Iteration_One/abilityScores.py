@@ -14,5 +14,5 @@ class Abilities():
         self.intelligence = intelligence
         self.charisma = charisma
 
-    def add_modifier():
+    #def add_modifier():
         

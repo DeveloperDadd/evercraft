@@ -5,10 +5,10 @@ from Character import Character
 # Can get and set an alignment
 
 def test_get_alignment():
-    a = Morals()
+    a = Character()
     assert a.alignment == 'Good'
 
 def test_set_alignment(): 
-    x = Morals()
+    x = Character()
     x.set_alignment('Evil')
     assert x.alignment == 'Evil'
