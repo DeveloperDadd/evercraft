@@ -1,5 +1,5 @@
 import math
-from Character import Character
+from character import Character
 
 
 # Test 1

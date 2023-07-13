@@ -1,4 +1,4 @@
-from Character import Character
+from character import Character
 # Feature : As a character I want to have an alignment so that I have something 
 # to guide my actions
 # Can choose between Good, Evil, and Neutral

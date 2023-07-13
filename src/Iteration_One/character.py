@@ -1,6 +1,6 @@
 #Create a character as part of the assignment
 import math
-from Abilities import Abilities
+from abilities import Abilities
 
 
 class Character:
@@ -19,7 +19,6 @@ class Character:
         self.abilities = Abilities()
 
         
-
     #takes in a string 
     def set_name(self, n):
         self.name = n
@@ -76,5 +75,3 @@ class Character:
             xp_limit = self.level * 1000
             return self.level
         
-
-    

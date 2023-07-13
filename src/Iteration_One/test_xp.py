@@ -1,4 +1,4 @@
-from Character import Character
+from character import Character
 
 # TEST 1
 # This test is designed to check if the xp of 'self' goes up by 10 after a successful hit (whether critical or normal) on the enemy and also that it keeps incrementing

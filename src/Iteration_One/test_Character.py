@@ -1,4 +1,4 @@
-from Character import Character
+from character import Character
 # Feature : Create a Character
 # As a character I want to have a name so that I can be distinguished from other characters
 # Can get a set Name

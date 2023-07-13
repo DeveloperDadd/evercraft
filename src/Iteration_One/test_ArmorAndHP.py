@@ -1,4 +1,4 @@
-from Character import Character
+from character import Character
 
 def test_get_armorAndHP():
     x = Character()
