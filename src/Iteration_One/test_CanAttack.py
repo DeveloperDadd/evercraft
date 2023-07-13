@@ -5,9 +5,6 @@ def test_can_attack():
     defender = Character()
     defender.armor = 12
 
-    # Create an instance of CanAttack
-    attack = Character.check_attack
-
     # Simulate attacking with a roll of 10
-    result = attack(10, defender)
+    result = Character.check_attack(10, defender)
     assert result is False

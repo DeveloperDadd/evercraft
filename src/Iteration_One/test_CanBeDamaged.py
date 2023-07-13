@@ -5,12 +5,11 @@ from Character import Character
 # When hit points are 0 or fewer, the character (defender) is dead
 
 def test_getRekt():
-    x = Charcter.check_damage
     defender = Character()
    
     # when character is hit. loses of point of health, if its a 20 lose 2 points
-    result = x.check_damage(20, defender)
+    result = Character.check_damage(20, defender)
     assert defender.healthpoints == 3
 
-    result = x.check_damage(19, defender)
+    result = Character.check_damage(19, defender)
     assert defender.healthpoints == 2
