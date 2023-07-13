@@ -1,6 +1,4 @@
 #Create a character as part of the assignment
-from ArmorAndHP import Armor_And_Hitpoints
-from CanAttack import CanAttack
 
 class Character:
     def __init__(self, armor = 10.0, hitpoints = 5.0):
