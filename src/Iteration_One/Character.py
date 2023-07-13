@@ -26,4 +26,15 @@ class Character:
             canAttack = False
         return canAttack
     
-
+    #This function checks the condition if CanAttack is True of False
+    #If true then self can hit the defender for one damage point
+    #If the roll == 20 then hit the defender for two damage points
+    #If CanAttack == False then nothing happens
+    def check_damage(self, roll, defender):
+        self.roll = roll
+        if CanAttack == True and self.roll < 20:
+            defender.healthpoints = defender.healthpoints - 1
+        elif CanAttack == True and self.roll == 20:
+            defender.healthpoints = defender.healthpoints - 2
+        else:
+            return
