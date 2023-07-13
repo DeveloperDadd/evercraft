@@ -1,6 +1,4 @@
 from Character import Character
-from CanBeDamaged import Get_Rekt
-from ArmorAndHP import Armor_And_Hitpoints
 
 # As an attacker I want to be able to damage my enemies so that they will die and I will live
 # If a roll is a natural 20 then a critical hit is dealt and the damage is doubled

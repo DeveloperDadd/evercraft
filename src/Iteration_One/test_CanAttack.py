@@ -1,4 +1,3 @@
-from CanAttack import CanAttack
 from Character import Character
 
 def test_can_attack():

@@ -1,5 +1,4 @@
 from Character import Character
-from CanAttack import CanAttack
 # As a character I want to have several abilities so that I am not identical to other
 # characters except in name
 # Abilities are Strength, Dexterity, Constitution, Wisdom, Intelligence, Charisma

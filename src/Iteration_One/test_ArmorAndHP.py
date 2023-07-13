@@ -1,5 +1,4 @@
-from ArmorAndHP import Armor_And_Hitpoints
-
+from Character import Character
 
 def test_get_armorAndHP():
     armor = 10
