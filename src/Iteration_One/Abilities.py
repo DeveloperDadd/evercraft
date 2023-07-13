@@ -13,13 +13,19 @@ class Abilities():
         self.intelligence = intelligence
         self.charisma = charisma
 
-    def add_modifiers(self, ):
+    def add_modifiers(self):
         abmods = [0,0,0,0,0,0]
-        abmods[0] = floor((strength - 10) / 2) #abilities = [0]
-        abmods[1] = floor((dexterity - 10) / 2)#if dexterity is 10 then mod is 0 if 20 then +5
-        abmods[2] = floor((constitution - 10) / 2)
-        abmods[3] = floor((wisdom - 10) / 2)
-        abmods[4] = floor((intelligence - 10) / 2)
-        abmods[5] = floor((charisma - 10) / 2)
-
+        abmods[0] = floor((self.strength - 10) / 2)
+        abmods[1] = floor((self.dexterity - 10) / 2)
+        abmods[2] = floor((self.constitution - 10) / 2)
+        abmods[3] = floor((self.wisdom - 10) / 2)
+        abmods[4] = floor((self.intelligence - 10) / 2)
+        abmods[5] = floor((self.charisma - 10) / 2)
+        # abmods = [
+        # strength: floor((self.strength - 10) / 2)
+        # dexterity: floor((self.dexterity - 10) / 2)
+        # constitution:floor((self.constitution - 10) / 2)
+        # wisdom: floor((self.wisdom - 10) / 2)
+        # intelligence: floor((self.intelligence - 10) / 2)
+        # charisma: floor((self.charisma - 10) / 2)]
 
