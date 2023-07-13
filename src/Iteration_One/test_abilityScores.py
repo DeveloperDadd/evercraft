@@ -1,6 +1,5 @@
-from Character import Character
-from CanAttack import CanAttack
-from abilityScores import Abilities
+from character import Character
+from abilities import Abilities
 
 def test_check_abilityscores():
     s = Abilities()
