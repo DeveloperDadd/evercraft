@@ -9,9 +9,10 @@ def test_get_xp():
 
     #Critical Hit
     Character.check_damage(self, 20, defender)
-    assert self.xp == 10
+    assert self.current_xp == 10
 
+    #Next consecutive hit
     Character.check_damage(self, 19, defender)
-    assert self.xp == 20
+    assert self.current_xp == 20
 
 
