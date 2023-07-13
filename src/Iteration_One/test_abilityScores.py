@@ -1,5 +1,5 @@
 from Character import Character
-from abilityScores import Abilities
+from Abilities import Abilities
 
 def test_check_abilityscores():
     s = Abilities()

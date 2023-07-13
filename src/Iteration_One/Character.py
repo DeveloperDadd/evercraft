@@ -1,12 +1,14 @@
 #Create a character as part of the assignment
+from Abilities import Abilities
 
 class Character:
-    def __init__(self, armor = 10.0, hitpoints = 5.0, can_attack = False):
+    def __init__(self, armor = 10.0, hitpoints = 5.0, can_attack = False, xp = 0):
         self.name = 'Cletus'
         self.alignment = 'Good'
         self.armor = armor
         self.hitpoints = hitpoints
         self.can_attack = can_attack
+        self.xp = xp
         
 
     #takes in a string 
@@ -32,14 +34,19 @@ class Character:
     #If CanAttack == False then nothing happens
     def check_damage(self, roll, defender):
         self.roll = roll
+        damage = 1
         if self.can_attack == True and self.roll < 20:
-            defender.hitpoints = defender.hitpoints - 1
+            defender.hitpoints = defender.hitpoints - damage
+            self.xp += 10
             if defender.hitpoints == 0:
                 print('You have slain your enemy!')
         elif self.can_attack == True and self.roll == 20:
-            defender.hitpoints = defender.hitpoints - 2
+            defender.hitpoints = defender.hitpoints - damage * 2
+            self.xp += 10
             if defender.hitpoints <= 0:
                 print('You decapitate your enemy and put his head on a pike. Hoorah!')
         else:
             return
         return defender.hitpoints
+
+    
