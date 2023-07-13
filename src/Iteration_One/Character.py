@@ -3,8 +3,10 @@ from ArmorAndHP import Armor_And_Hitpoints
 from CanAttack import CanAttack
 
 class Character:
-    def __init__(self):
+    def __init__(self, armor = 10.0, hitpoints = 5.0):
         self.name = 'Cletus'
+        self.armor = armor
+        self.hitpoints = hitpoints
 
     #takes in a string
     def set_name(self, n):
@@ -12,6 +14,8 @@ class Character:
     
     def set_alignment(self, alignment):
         self.alignment = alignment
+    
+
 
 
 
