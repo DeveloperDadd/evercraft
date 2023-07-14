@@ -1,5 +1,4 @@
 from character import Character
-from defender import Defender
     
 class Fighter(Character):
     def __init__(self):
@@ -29,17 +28,14 @@ class Monk(Character):
 #The oath of throwing it back is great with us
 class Paladin(Character):
     def __init__(self):
+        super().__init__()  # Call the parent class's __init__ method
         self.hitpoints_leveler = 8
         self.alignment = 'Good'
 
-        defender = Defender()
-    #+2 to attack and damage when attacking Evil characters 
-        if defender.alignment =="Evil":
-            self.damage = 2
-    #does triple damage when critting on an Evil character (i.e. add the +2 bonus for a regular attack, and then triple that)
-        if self.roll ==20:
-            self.damage = self.damage * 3
-    #attacks roll is increased by 1 for every level instead of every other level
+    def check_damage(self, roll, defender):
+        if defender.alignment == "Evil":
+            self.damage += 2  # Add extra damage when attacking evil characters
+        super().check_damage(roll, defender) 
 
     # Bard // As a player I want to play a Bard so that I can charm, inspire, seduce and entertain my allies/enemies alike
 class Bard(Character):

@@ -16,3 +16,7 @@ def test_set_name2():
     d = Character()
     d.set_name('Joe')
     assert d.name == 'Joe'
+
+def test_get_alignment():
+    d = Character()
+    assert d.alignment == 'Neutral'
