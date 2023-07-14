@@ -35,20 +35,20 @@ class Paladin(Character):
 
     #+2 to attack and damage when attacking Evil characters 
     if defender.alignment =="Evil":
-        
-does triple damage when critting on an Evil character (i.e. add the +2 bonus for a regular attack, and then triple that)
-attacks roll is increased by 1 for every level instead of every other level
+        self.damage += 2
+    #does triple damage when critting on an Evil character (i.e. add the +2 bonus for a regular attack, and then triple that)
+    #attacks roll is increased by 1 for every level instead of every other level
 
-# Bard // As a player I want to play a Bard so that I can charm, inspire, seduce and entertain my allies/enemies alike
+    # Bard // As a player I want to play a Bard so that I can charm, inspire, seduce and entertain my allies/enemies alike
 class Bard(Character):
     def __init__(self):
         self.hitpoints_leveler = 8
 
-can cast one additional spell per level
-can use Bardic Inspiration ability twice as many times per short rest
+    #can cast one additional spell per level
+    #can use Bardic Inspiration ability twice as many times per short rest
 
-# Cleric // As a player I want to play a Cleric so that I can heal the wounded, smite the undead, and serve my deity
-class Cleric(Character):
+    # Cleric // As a player I want to play a Cleric so that I can heal the wounded, smite the undead, and serve my deity
+    class Cleric(Character):
     def __init__(self):
         self.hitpoints_leveler = 8
 
@@ -94,3 +94,4 @@ can add +1 to spell save DC
 gain +2 bonus to attack rolls and damage rolls with ranged weapons
 can track creatures with advantage
 
+OrcShaman()

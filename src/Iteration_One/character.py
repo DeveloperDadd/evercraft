@@ -2,12 +2,13 @@
 import math
 
 class Character:
-    def __init__(self, armor = 10.0, hitpoints = 5.0, can_attack = False, damage=1,
+    def __init__(self, race = 'Human', armor = 10.0, hitpoints = 5.0, can_attack = False, damage=1,
      current_xp = 0, total_xp = 0, level = 1, strength = 10, dexterity = 10, constitution = 10, 
     wisdom = 10, intelligence = 10, charisma = 10, hitpoints_leveler = 5):
     
         #Character Info
         self.name = 'Leopold Ironfist'
+        self.race = 'Human'
         self.alignment = 'Neutral'
         self.armor = armor #Armor class = 10
         self.hitpoints = hitpoints #Hitpoints = 5
