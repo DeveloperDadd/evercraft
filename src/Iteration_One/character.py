@@ -8,7 +8,7 @@ class Character:
     
         #Character Info
         self.name = 'Leopold Ironfist'
-        self.race = 'Human'
+        self.race = race # Human by default
         self.alignment = 'Neutral'
         self.armor = armor #Armor class = 10
         self.hitpoints = hitpoints #Hitpoints = 5

@@ -3,6 +3,7 @@ from character import Character
 class OrcShaman(Character):
     def __init__(self):
         self.name = 'Drakka Bloodhowl'
+    print(self)
     
 class Fighter(Character):
     # Fighter // As a player I want to play a Fighter so that I can kick ass and take names
