@@ -33,7 +33,9 @@ class Paladin(Character):
         self.hitpoints_leveler = 8
         self.alignment = 'Good'
 
-+2 to attack and damage when attacking Evil characters
+    #+2 to attack and damage when attacking Evil characters 
+    if defender.alignment =="Evil":
+        
 does triple damage when critting on an Evil character (i.e. add the +2 bonus for a regular attack, and then triple that)
 attacks roll is increased by 1 for every level instead of every other level
 
