@@ -1,14 +1,12 @@
 from character import Character
-
-class OrcShaman(Character):
-    def __init__(self):
-        self.name = 'Drakka Bloodhowl'
-    print(self)
+from defender import Defender
     
 class Fighter(Character):
+    def __init__(self):
+        pass
     # Fighter // As a player I want to play a Fighter so that I can kick ass and take names
     #10 add health per level up instead of 5 
-    self.roll +=1
+    #self.roll +=1
 
 class Rogue(Character):
 # Rogue // As a player I want to play a Rogue so that I can defeat my enemies with finesse
@@ -34,6 +32,7 @@ class Paladin(Character):
         self.hitpoints_leveler = 8
         self.alignment = 'Good'
 
+        defender = Defender()
     #+2 to attack and damage when attacking Evil characters 
         if defender.alignment =="Evil":
             self.damage = 2
@@ -83,18 +82,19 @@ class Warlock(Character):
 
     #can cast two additional spells per level
     #gain +2 bonus to spell attack rolls and damage rolls
-    if defender.alignment == "Good":
-        self.damage += 2
+    #if defender.alignment == "Good":
+    #    self.damage += 2
 
 class Wizard(Character):
 # Wizard // As a player I want to play a Wizard so that I can study ancient tomes, learn a wide variety of spells, and unravel arcane mysteries ( I die to literally anything
-
-    self.hitpoints_leveler = 6
+    def __init__(self):    
+        self.hitpoints_leveler = 6
     #can cast two additional spells per level
     #can add +1 to spell save DC
 
 class Ranger(Character):
 # Ranger // As a player I want to play a Ranger so that I can be a skilled tracker, master of ranged combat, and have a bond with the wilderness
- self.hitpoints_leveler = 8
+    def __init__(self):
+        self.hitpoints_leveler = 8
     #gain +2 bonus to attack rolls and damage rolls with ranged weapons
     #can track creatures with advantage
