@@ -6,7 +6,7 @@ from character import Character
 
 def test_get_alignment():
     a = Character()
-    assert a.alignment == 'Good'
+    assert a.alignment == 'Neutral'
 
 def test_set_alignment(): 
     x = Character()

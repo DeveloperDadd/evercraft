@@ -1,24 +1,48 @@
 #Create a character as part of the assignment
 import math
-from abilities import Abilities
-
 
 class Character:
     def __init__(self, armor = 10.0, hitpoints = 5.0, can_attack = False, damage=1,
-     current_xp = 0, total_xp = 0, level = 1):
+     current_xp = 0, total_xp = 0, level = 1, strength = 10, dexterity = 10, constitution = 10, 
+    wisdom = 10, intelligence = 10, charisma = 10):
+    
+        #Character Info
+        self.name = 'Leopold Ironfist'
+        self.alignment = 'Neutral'
+        self.armor = armor #Armor class = 10
+        self.hitpoints = hitpoints #Hitpoints = 5
 
-        self.name = 'Cletus'
-        self.alignment = 'Good'
-        self.armor = armor
-        self.hitpoints = hitpoints
-        self.can_attack = can_attack
-        self.damage = damage
+        #CAN ATTACK & DAMAGE VALUES
+        self.can_attack = can_attack #Default set to False
+        self.damage = damage #Default damage = 1
+
+        #LEVELS
         self.current_xp = current_xp
         self.total_xp = total_xp
-        self.level = level
-        self.abilities = Abilities()
+        self.level = level #Default level is 1
 
-        
+        #ABILITIES all DEFAULT to a Score of 10
+        self.strength = strength 
+        self.dexterity = dexterity
+        self.constitution = constitution
+        self.wisdom = wisdom
+        self.intelligence = intelligence
+        self.charisma = charisma
+    
+        self.set_modifiers()
+    #Abilities Modifiers
+    def set_modifiers(self):
+        self.strength_mod = math.floor((self.strength - 10) / 2)
+        self.dexterity_mod = math.floor((self.dexterity - 10) / 2)
+        self.constitution_mod = math.floor((self.constitution - 10) / 2)
+        self.wisdom_mod = math.floor((self.wisdom - 10) / 2)
+        self.intelligence_mod = math.floor((self.intelligence - 10) / 2)
+        self.charisma_mod = math.floor((self.charisma - 10) / 2)
+    
+    #Set total ability 
+    #def set_total_ability(self):
+
+    
     #takes in a string 
     def set_name(self, n):
         self.name = n
@@ -49,7 +73,7 @@ class Character:
             if defender.hitpoints == 0:
                 print('You have slain your enemy!')
         elif self.can_attack == True and self.roll == 20:
-            defender.hitpoints = defender.hitpoints - damage * 2
+            defender.hitpoints = defender.hitpoints - self.damage * 2
             self.current_xp += 10
             self.total_xp += 10
             if defender.hitpoints <= 0:

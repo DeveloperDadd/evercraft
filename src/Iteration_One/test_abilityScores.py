@@ -1,12 +1,16 @@
 from character import Character
-from abilities import Abilities
 
 def test_check_abilityscores():
-    s = Abilities()
-    s.strength=10
-    s.charisma=10
-    s.wisdom=10
-    s.constitution=10
-    s.dexterity=10
-    s.intelligence=10
-    
+    s = Character()
+    assert s.strength == 10
+
+    c = Character()
+    assert c.strength_mod == 0
+
+    t = Character()
+    t.strength = 20
+    t.set_modifiers()  # Call set_modifiers() to update the modifiers
+    assert t.strength_mod == 5
+
+# Run the test case
+test_check_abilityscores()

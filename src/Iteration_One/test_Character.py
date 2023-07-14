@@ -5,7 +5,7 @@ from character import Character
 
 def test_get_name():
     c = Character()
-    assert c.name == 'Cletus'
+    assert c.name == 'Leopold Ironfist'
 
 def test_set_name():
     d = Character()
