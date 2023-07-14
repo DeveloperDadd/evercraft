@@ -4,13 +4,14 @@ import math
 class Character:
     def __init__(self, armor = 10.0, hitpoints = 5.0, can_attack = False, damage=1,
      current_xp = 0, total_xp = 0, level = 1, strength = 10, dexterity = 10, constitution = 10, 
-    wisdom = 10, intelligence = 10, charisma = 10):
+    wisdom = 10, intelligence = 10, charisma = 10, hitpoints_leveler = 5):
     
         #Character Info
         self.name = 'Leopold Ironfist'
         self.alignment = 'Neutral'
         self.armor = armor #Armor class = 10
         self.hitpoints = hitpoints #Hitpoints = 5
+        self.hitpoints_leveler = hitpoints_leveler
 
         #CAN ATTACK & DAMAGE VALUES
         self.can_attack = can_attack #Default set to False
@@ -92,7 +93,7 @@ class Character:
         xp_limit = 1000
         if self.current_xp >= xp_limit: 
             self.level = (math.floor(self.total_xp / 1000) + 1)
-            self.hitpoints = self.hitpoints + 5
+            self.hitpoints = self.hitpoints + self.hitpoints_leveler
             self.damage = self.damage + 1
             print("Unleash your newfound power. All who oppose you shall suffer")
             self.current_xp = self.current_xp - 1000
